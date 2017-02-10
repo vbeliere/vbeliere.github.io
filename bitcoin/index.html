@@ -11,8 +11,12 @@
              retour
     </a>	
  <script>	 
-var block = $.get("http://bitcoin.mubiz.com/blocks", {"blocks": 447077});
-var reponse = block.reponseText;		
- </script>		
+var block = $.get("http://bitcoin.mubiz.com/blocks", {"blocks": 1});
+var reponse = JSON.parse(block.reponseText).blocks;//on parse le resultat puis on recuper l'attribut blocks
+   document.getElementById("texte").innerHTML = "<p>"+ reponse + "</p>";// on ecrit la reponse
+ </script>	
+  
+<div id = "texte">
+</div>
  </body>
 </html>
