@@ -13,7 +13,7 @@
     </a>	
  <script>	 
 var block = $.get("http://bitcoin.mubiz.com/blocks", {"blocks": 1});
-var reponse = JSON.parse(block.reponseText).blocks;//on parse le resultat puis on recuper l'attribut blocks
+var reponse = JSON.parse(block.responseText).blocks;//on parse le resultat puis on recuper l'attribut blocks
    document.getElementById("texte").innerHTML = "<p>"+ reponse + "</p>";// on ecrit la reponse
  </script>	
   
